@@ -1,0 +1,25 @@
+private void checkForWinner() {
+   
+    for (int row = 0; row < 3; row++) {
+        if (checkThree(buttons[row][0], buttons[row][1], buttons[row][2])) {
+            announceWinner(buttons[row][0].getText());
+            return;
+        }
+    }
+
+    for (int col = 0; col < 3; col++) {
+        if (checkThree(buttons[0][col], buttons[1][col], buttons[2][col])) {
+            announceWinner(buttons[0][col].getText());
+            return;
+        }
+    }
+
+    if (checkThree(buttons[0][0], buttons[1][1], buttons[2][2])) {
+        announceWinner(buttons[0][0].getText());
+        return;
+    }
+
+    if (checkThree(buttons[0][2], buttons[1][1], buttons[2][0])) {
+        announceWinner(buttons[0][2].getText());
+        return;
+    }
