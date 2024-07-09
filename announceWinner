@@ -1,0 +1,8 @@
+private boolean checkThree(JButton b1, JButton b2, JButton b3) {
+        return !b1.getText().equals("") && b1.getText().equals(b2.getText()) && b2.getText().equals(b3.getText());
+    }
+
+    private void announceWinner(String winner) {
+        JOptionPane.showMessageDialog(this, "Player " + winner + " wins!");
+        resetBoard();
+    }
