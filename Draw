@@ -1,0 +1,15 @@
+ boolean draw = true;
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
+                if (buttons[row][col].getText().equals("")) {
+                    draw = false;
+                    break;
+                }
+            }
+        }
+
+        if (draw) {
+            JOptionPane.showMessageDialog(this, "opps draw!");
+            resetBoard();
+        }
+    }
